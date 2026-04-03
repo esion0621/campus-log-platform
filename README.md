@@ -83,7 +83,7 @@ campus-project/
 
 ### 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/campus-log-platform.git
+git clone 
 cd campus-project
 ```
 

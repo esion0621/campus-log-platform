@@ -180,6 +180,11 @@ npm run dev
 3. **前端跨域**：后端已配置 CORS，若仍报错请检查 `WebConfig`。
 4. **AI 无法回答平台数据**：检查智谱 AI API Key 是否有效，以及 `AIQueryService` 中的关键词匹配是否覆盖。
 
+<img width="1571" height="692" alt="批注 2026-04-03 124020" src="https://github.com/user-attachments/assets/7393dc96-6caa-43eb-8e17-eb67eabc4f11" />
+<img width="1601" height="778" alt="批注 2026-04-03 124123" src="https://github.com/user-attachments/assets/70e5c82b-e129-4db5-aead-440a215cdb8c" />
+<img width="1608" height="791" alt="批注 2026-04-03 124222" src="https://github.com/user-attachments/assets/6c193b86-97aa-4a82-b6ce-7b23bd692bd0" />
+
+
 
 ## 致谢
 

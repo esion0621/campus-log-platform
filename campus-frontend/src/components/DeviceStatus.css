@@ -1,0 +1,107 @@
+.device-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-glow);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: all 0.3s;
+  animation: fadeInUp 0.5s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.device-card:hover {
+  border-color: var(--border-glow-hover);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.device-summary {
+  margin: 10px 0 15px;
+}
+
+.rate-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3d9cff;
+  text-shadow: 0 0 10px #3d9cff;
+}
+
+.rate-detail {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-left: 10px;
+}
+
+.device-progress {
+  height: 10px;
+  background: #1f3147;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3d9cff, #7ac1ff);
+  border-radius: 10px;
+  position: relative;
+  transition: width 0.5s;
+}
+
+.progress-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  filter: blur(5px);
+  animation: flow 2s infinite linear;
+}
+
+@keyframes flow {
+  0% { left: -20px; }
+  100% { left: 100%; }
+}
+
+.device-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.device-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #1e3452;
+  font-size: 14px;
+}
+
+.device-name {
+  color: #b7cef0;
+}
+
+.device-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-online .status-dot {
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.status-offline .status-dot {
+  background: var(--danger);
+  box-shadow: 0 0 8px var(--danger);
+}

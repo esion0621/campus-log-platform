@@ -1,0 +1,76 @@
+.log-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.log-header h2 {
+  color: var(--text-secondary);
+  border-left: 4px solid #2a7fff;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.log-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: rgba(18, 28, 48, 0.7);
+  border: 1px solid var(--border-glow);
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab-btn i {
+  font-size: 14px;
+}
+
+.tab-btn:hover {
+  background: rgba(61, 156, 255, 0.2);
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: var(--blue-gradient);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.log-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ---------- 移动端适配 (屏幕宽度 ≤ 768px) ---------- */
+@media (max-width: 768px) {
+  .log-tabs {
+    flex-wrap: nowrap;          /* 禁止换行 */
+    overflow-x: auto;            /* 允许横向滚动 */
+    -webkit-overflow-scrolling: touch; /* 流畅滚动 */
+    padding-bottom: 5px;         /* 给滚动条留点空间 */
+    gap: 8px;                    /* 减小间隙 */
+  }
+
+  .tab-btn {
+    white-space: nowrap;         /* 文字不换行 */
+    padding: 6px 12px;           /* 稍小一点的内边距 */
+    font-size: 13px;             /* 稍小字体 */
+  }
+
+  .log-header h2 {
+    font-size: 18px;             /* 标题略缩小 */
+    margin-bottom: 10px;
+  }
+}

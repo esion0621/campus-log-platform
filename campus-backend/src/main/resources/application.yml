@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: campus-backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/campus_log?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    username: root
+    password: ''
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      ddl-auto: update          
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+  redis:
+    host: localhost
+    port: 6379
+    password:                 
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+
+server:
+  port: 2006                    
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    
+zhipuai:
+  api-key: ''
+  model: glm-5
+  url: https://open.bigmodel.cn/api/paas/v4/chat/completions   

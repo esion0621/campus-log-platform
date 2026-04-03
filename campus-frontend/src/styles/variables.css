@@ -1,0 +1,14 @@
+:root {
+  --bg-primary: #0a0f1e;
+  --card-bg: rgba(18, 28, 48, 0.7);
+  --border-glow: rgba(32, 128, 255, 0.3);
+  --border-glow-hover: rgba(64, 160, 255, 0.6);
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0d0ff;
+  --text-highlight: #f0f9ff;
+  --blue-gradient: linear-gradient(135deg, #3d9cff, #9ad0ff);
+  --danger: #ff4d4f;
+  --warning: #faad14;
+  --success: #52c41a;
+  --shadow-color: rgba(0, 120, 255, 0.3);
+}

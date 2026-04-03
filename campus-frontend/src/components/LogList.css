@@ -1,0 +1,61 @@
+.log-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-glow);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: all 0.3s;
+  animation: fadeInUp 0.5s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-card:hover {
+  border-color: var(--border-glow-hover);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.log-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10px, black 90%, transparent 100%);
+}
+
+.log-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #1e3452;
+  font-size: 13px;
+  display: flex;
+  line-height: 1.5; /* 增加行高，避免重叠 */
+  animation: fadeIn 0.5s;
+}
+
+.log-time {
+  color: #6d8fc6;
+  width: 80px; /* 固定宽度，确保对齐 */
+  flex-shrink: 0;
+  font-family: monospace;
+}
+
+.log-content {
+  color: #b7cef0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 10px; /* 增加左边距 */
+}
+
+.log-empty {
+  color: #6d8fc6;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

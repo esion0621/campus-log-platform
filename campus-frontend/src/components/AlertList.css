@@ -1,0 +1,75 @@
+.alert-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-glow);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: all 0.3s;
+  animation: fadeInUp 0.5s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-card:hover {
+  border-color: var(--border-glow-hover);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.alert-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #1e3452;
+  font-size: 14px;
+  animation: slideIn 0.3s ease;
+}
+
+.alert-item.new {
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 2px solid var(--warning);
+  padding-left: 6px;
+}
+
+.alert-level {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.level-high { background: var(--danger); box-shadow: 0 0 8px var(--danger); }
+.level-medium { background: var(--warning); box-shadow: 0 0 8px var(--warning); }
+.level-low { background: var(--success); box-shadow: 0 0 8px var(--success); }
+
+.alert-device {
+  font-weight: bold;
+  color: #d2e2ff;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alert-message {
+  flex: 1;
+  color: #b7cef0;
+  margin: 0 8px;
+}
+
+.alert-time {
+  color: #6d8fc6;
+  font-size: 12px;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}

@@ -63,11 +63,10 @@ campus-project/
 └── README.md
 ```
 
-> **注意**：`node_modules`、`target`、`project/target` 等构建产物已通过 `.gitignore` 忽略。
 
 ## 环境要求
 
-- **操作系统**：Linux (Ubuntu 20.04/22.04 推荐) 或 macOS
+- **操作系统**：Linux (Ubuntu 20.04/22.04 推荐) 
 - **Java**：JDK 17（后端 & Spark）
 - **Scala**：2.12.17（Spark 3.1.3 兼容版本）
 - **Python**：3.8+（运行模拟器）
@@ -89,9 +88,13 @@ cd campus-project
 
 ### 2. 配置数据库
 - 创建 MySQL 数据库 `campus_log`。
-- 执行 `campus-backend/src/main/resources/schema.sql`（或使用 JPA 自动建表，但复合主键需手动处理）。
-- 导入示例维度数据（学生信息、学院、设备信息、图书信息等，参见项目文档）。
-
+- 详细建表参考文档
+- kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic library-access
+- kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic edu-access
+- kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic canteen-consume
+- kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic device-status
+- kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic edu-session
+- kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic library-borrow
 ### 3. 配置敏感信息（占位符替换）
 - `campus-backend/src/main/resources/application.yml`：修改 MySQL 密码、Redis 密码、智谱 AI API Key。
 - `producer/producer_enhanced.py`：修改 MySQL 连接密码。
